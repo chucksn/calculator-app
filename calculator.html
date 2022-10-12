@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice page</title>
+    <style>
+      #calc-display {
+        display: inline-block;
+        background-color: lightgray;
+        width: 500px;
+        height: 70px;
+        padding: 8px;
+        text-align: right;
+        font-size: 60px;
+        font-weight: normal;
+        margin: auto;
+      }
+
+      #btn-container {
+        display: grid;
+        width: 500px;
+        border: 1px solid lightgray;
+        padding: 8px;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+
+      div > button {
+        padding: 4px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <h2 id="calc-display"></h2>
+
+      <div id="btn-container">
+        <button id="btn%" class="%operator">&#37;</button>
+        <button id="btnC" class="clear">c</button>
+        <button id="btnBack" class="back">&#8592;</button>
+        <button id="btnDivision" class="operator">&#247;</button>
+        <button id="btn7" class="numeric">7</button>
+        <button id="btn8" class="numeric">8</button>
+        <button id="btn9" class="numeric">9</button>
+        <button id="btnMultiply" class="operator">&#215;</button>
+        <button id="btn4" class="numeric">4</button>
+        <button id="btn5" class="numeric">5</button>
+        <button id="btn6" class="numeric">6</button>
+        <button id="btnMinus" class="operator">&#8722;</button>
+        <button id="btn1" class="numeric">1</button>
+        <button id="btn2" class="numeric">2</button>
+        <button id="btn3" class="numeric">3</button>
+        <button id="btnPlus" class="operator">&#43;</button>
+        <button id="btnPlusMinus">+/-</button>
+        <button id="btn0" class="numeric">0</button>
+        <button id="btnDot" class="dot">.</button>
+        <button id="btnEqual" class="=operator">&#61;</button>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
