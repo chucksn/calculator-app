@@ -31,6 +31,7 @@ container.addEventListener("click", (e) => {
     minusClicked = false;
     multiplyClicked = false;
     divideClicked = false;
+    percentBtnFirstClick = true;
     if (equalBtnClicked && numericBtnsClicked) {
       innerTempMemory = [];
     }
