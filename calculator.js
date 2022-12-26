@@ -44,7 +44,7 @@ container.addEventListener("click", (e) => {
         display.innerText = btnValue;
       } else if (display.innerText == "0.") {
         display.innerText += btnValue;
-      } else if (display.innerText.length < 16) {
+      } else if (display.innerText.length < 14) {
         display.innerText += btnValue;
       } else {
         display.innerText = display.innerText;
@@ -53,7 +53,7 @@ container.addEventListener("click", (e) => {
     if (e.target.classList.contains("dot")) {
       if (display.innerText.includes(".")) {
         display.innerText = display.innerText;
-      } else if (display.innerText.length < 16) {
+      } else if (display.innerText.length < 14) {
         display.innerText += btnValue;
       } else {
         display.innerText = display.innerText;
@@ -83,6 +83,7 @@ container.addEventListener("click", (e) => {
   }
 
   if (e.target.classList.contains("clear")) {
+    equalBtnClicked = false;
     display.innerText = 0;
     innerCalculator = 0;
     innerTempMemory = [];
@@ -118,7 +119,7 @@ container.addEventListener("click", (e) => {
     percentBtnFirstClick = false;
     percentBtnClicked = true;
     // if block below prevents displayed result from exceeding display area
-    if (display.innerText.length > 16) {
+    if (display.innerText.length > 14) {
       display.innerText = Number(display.innerText).toExponential(4);
     } else {
       display.innerText = display.innerText;
@@ -291,14 +292,14 @@ container.addEventListener("click", (e) => {
     }
 
     // if block below prevents displayed result from exceeding display area
-    if (display.innerText.length > 16) {
+    if (display.innerText.length > 14) {
       display.innerText = Number(display.innerText).toExponential(4);
     } else {
       display.innerText = display.innerText;
     }
   }
 
-  if (e.target.classList.contains("=operator")) {
+  if (e.target.classList.contains("equal")) {
     equalBtnClicked = true;
 
     if (
@@ -556,7 +557,7 @@ container.addEventListener("click", (e) => {
     }
 
     // if block below prevents displayed result from exceeding display area
-    if (display.innerText.length > 16) {
+    if (display.innerText.length > 14) {
       display.innerText = Number(display.innerText).toExponential(4);
     } else {
       display.innerText = display.innerText;
