@@ -4,33 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>practice page</title>
-    <style>
-      #calc-display {
-        display: inline-block;
-        background-color: lightgray;
-        width: 500px;
-        height: 70px;
-        padding: 8px;
-        text-align: right;
-        font-size: 60px;
-        font-weight: normal;
-        margin: auto;
-      }
-
-      #btn-container {
-        display: grid;
-        width: 500px;
-        border: 1px solid lightgray;
-        padding: 8px;
-        grid-template-columns: 25% 25% 25% 25%;
-      }
-
-      div > button {
-        padding: 4px;
-        font-size: 30px;
-      }
-    </style>
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="calculator">
@@ -53,7 +28,7 @@
         <button id="btn2" class="numeric">2</button>
         <button id="btn3" class="numeric">3</button>
         <button id="btnPlus" class="operator">&#43;</button>
-        <button id="btnPlusMinus">+/-</button>
+        <button id="btnPlusMinus" class="plusMinus">+/-</button>
         <button id="btn0" class="numeric">0</button>
         <button id="btnDot" class="dot">.</button>
         <button id="btnEqual" class="=operator">&#61;</button>

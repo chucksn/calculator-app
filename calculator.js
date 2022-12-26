@@ -13,6 +13,7 @@ let plusClicked = false;
 let minusClicked = false;
 let multiplyClicked = false;
 let divideClicked = false;
+let negate = false; // +/-
 
 const display = document.querySelector("#calc-display");
 window.addEventListener("load", () => {
@@ -88,6 +89,15 @@ container.addEventListener("click", (e) => {
   }
 
   // Operators
+  if (e.target.classList.contains("plusMinus")) {
+    if (display.innerText !== 0 && !negate) {
+      display.innerText = Number(`-${display.innerText}`);
+      negate = true;
+    } else if (display.innerText !== 0 && negate) {
+      display.innerText = 0 - Number(display.innerText);
+      negate = false;
+    }
+  }
   if (e.target.classList.contains("%operator")) {
     if (percentBtnFirstClick) {
       result = 0;
